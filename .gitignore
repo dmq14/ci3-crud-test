@@ -1,41 +1,24 @@
-# Prerequisites
-*.d
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+.DS_Store
 
-# Precompiled Headers
-*.gch
-*.pch
+application/cache/*
+!application/cache/index.html
 
-# Linker files
-*.ilk
+application/logs/*
+!application/logs/index.html
 
-# Debugger Files
-*.pdb
+!application/*/.htaccess
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+composer.lock
+tests/mocks/database/ci_test.sqlite
 
-# Fortran module files
-*.mod
-*.smod
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+/vendor/
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
-# Executables
-*.exe
-*.out
-*.app
-
-# debug information files
-*.dwo
+/application/config/database.php
+/.idea/
+/.vscode/
