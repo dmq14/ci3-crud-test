@@ -1,5 +1,5 @@
 <h2>Item List</h2>
-<button id="btnAdd" class="btn btn-success mb-3">Add New Item 1</button>
+<button id="btnAdd" class="btn btn-success mb-3">Add New Item</button>
 
 <table class="table table-bordered">
     <thead>

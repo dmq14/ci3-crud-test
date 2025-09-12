@@ -1,4 +1,10 @@
 <?php
+require_once __DIR__ . '/vendor/autoload.php';
+
+if (file_exists(__DIR__ . '/.env')) {
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
+}
 /**
  * CodeIgniter
  *
@@ -53,7 +59,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	define('ENVIRONMENT', $_ENV['CI_ENV'] ?? 'development');
 
 /*
  *---------------------------------------------------------------
