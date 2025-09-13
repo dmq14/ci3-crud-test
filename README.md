@@ -93,6 +93,7 @@ http://localhost/ci3-crud-test/
 | PUT    | /api/v1/items/{id}  | Update an item    | `{ "title": "", "description": "" }`  |
 | DELETE | /api/v1/items/{id}  | Delete an item    | -                                     |
 
+> For full API documentation including request/response examples and error messages, please see [API_DOCUMENTATION.md](API_DOCUMENTATION.md)
 ---
 
 ## Authentication (Optional)
