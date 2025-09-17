@@ -93,8 +93,8 @@
                 res.data.forEach(item => {
                     rows += `
                     <tr>
-                        <td>${item.title}</td>
-                        <td>${item.description ?? ''}</td>
+                        <td>${escapeHtml(item.title)}</td>
+                        <td>${escapeHtml(item.description) ?? ''}</td>
                         <td>
                             <button class="btn btn-info btn-sm showBtn" data-id="${item.id}">Show</button>
                             <button class="btn btn-sm btn-primary btnEdit" data-id="${item.id}">Edit</button>
@@ -106,6 +106,16 @@
             $("#itemTable").html(rows);
         });
     }
+
+    function escapeHtml(str) {
+        return String(str)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
 
     // Add new
     $("#btnAdd").click(function() {
